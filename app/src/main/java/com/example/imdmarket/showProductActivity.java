@@ -11,11 +11,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class showProductActivity extends AppCompatActivity {
@@ -68,15 +66,13 @@ public class showProductActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            // Reutilizar o view, se possível
+
             if (convertView == null) {
                 convertView = LayoutInflater.from(getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
             }
 
-            // Obter o item atual
             Produto produto = getItem(position);
 
-            // Atualizar a visualização do item
             TextView textView = convertView.findViewById(android.R.id.text1);
             textView.setText(produto.getNome_produto());
 

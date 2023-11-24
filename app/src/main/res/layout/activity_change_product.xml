@@ -68,10 +68,10 @@
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="@+id/title2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="@+id/title2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.343" />
+        app:layout_constraintVertical_bias="0.335" />
 
     <EditText
         android:id="@+id/editTextNomeProduto2"

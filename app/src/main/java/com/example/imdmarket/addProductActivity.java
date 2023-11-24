@@ -63,7 +63,7 @@ public class addProductActivity extends AppCompatActivity {
     public static class SharedPrefManager {
         private static final String SHARED_PREF_NAME = "produtos";
         private static final String KEY_PRODUTOS = "produtos";
-        public static void saveProdutos(Context context, List<Produto> produtos) {
+        public static void salvarProdutos(Context context, List<Produto> produtos) {
             SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
 
@@ -111,10 +111,10 @@ public class addProductActivity extends AppCompatActivity {
             return produtos;
         }
     }
-    private void saveProduct(Produto produto) {
-        List<Produto> produtos = SharedPrefManager.getProdutos(this);
-        produtos.add(produto);
-        SharedPrefManager.saveProdutos(this, produtos);
+    private void saveProduct(Produto produtoIndex) {
+        List<Produto> listaProdutos = SharedPrefManager.getProdutos(this);
+        listaProdutos.add(produtoIndex);
+        SharedPrefManager.salvarProdutos(this, listaProdutos);
     }
 
 }
